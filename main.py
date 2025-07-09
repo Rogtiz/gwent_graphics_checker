@@ -31,7 +31,7 @@ def init_factions():
 from sqlalchemy import text
 
 def get_all_gwent_ids():
-    result = db.execute(text("SELECT gwent_id FROM players LIMIT 20"))
+    result = db.execute(text("SELECT gwent_id FROM players"))
     return [row[0] for row in result.fetchall()]
 
 def get_current_season_id():
